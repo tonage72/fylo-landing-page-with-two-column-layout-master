@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,700;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+p {
+	display: block;
+}
+
+html {
+	font-family: "Open Sans", sans-serif;
+}
+
+body {
+	container-type: inline-size;
+	margin: 6cqi;
+}
+
+ul {
+	list-style-type: none;
+}
+
+header {
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	justify-content: space-between;
+}
+
+header .img-logo {
+	width: 25cqi;
+}
+
+header ul {
+	font-size: 3.5cqi;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 40cqi;
+}
