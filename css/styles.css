@@ -10,6 +10,16 @@
 	box-sizing: border-box;
 }
 
+:root {
+	--color-very-dark-blue: hsl(243, 87%, 12%);
+	--desaturated-blue: hsl(238, 22%, 44%);
+	--bright-blue: hsl(224, 93%, 58%);
+	--moderate-cyan: hsl(170, 45%, 43%);
+	--light-grayish-blue: hsl(240, 75%, 98%);
+	--light-gray: hsl(0, 0%, 75%);
+	--border-radius: 1.5cqi;
+}
+
 img {
 	width: 100%;
 	display: block;
@@ -21,11 +31,12 @@ p {
 
 html {
 	font-family: "Open Sans", sans-serif;
+	font-size: 16px;
 }
 
 body {
-	container-type: inline-size;
-	margin: 6cqi;
+	margin: 6%;
+	text-align: center;
 }
 
 ul {
@@ -50,3 +61,55 @@ header ul {
 	justify-content: space-between;
 	width: 40cqi;
 }
+
+form {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 5cqi;
+	margin: 10cqi 0 30cqi 0;
+}
+
+form input {
+	line-height: 15cqi;
+	border: 1px solid black;
+	font-size: 5cqi;
+	border-radius: var(--border-radius);
+	padding-left: 7cqi;
+}
+
+form input::placeholder {
+	color: hsla(0, 0%, 0%, .2);
+}
+
+form button {
+	background-color: var(--bright-blue);
+	color: white;
+	line-height: 15cqi;
+	font-size: 4cqi;
+	font-weight: 700;
+	border-radius: var(--border-radius);
+}
+
+/* all three sections */
+.section {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+/* all info divs of sections */
+.section-info {
+	container-type: inline-size;
+}
+
+/* All your files... */
+.section:nth-child(2) .section-info > p:nth-child(1) {
+	font-size: 8cqi;
+	font-weight: 700;
+}
+
+/* Fylo stores your... */
+.section:nth-child(2) .section-info > p:nth-child(2) {
+	padding: 0 4cqi;
+	font-size: 4.5cqi;
+}
+
