@@ -35,19 +35,28 @@ html {
 }
 
 body {
-	margin: 6%;
 	text-align: center;
+}
+
+a {
+	text-decoration: none;
 }
 
 ul {
 	list-style-type: none;
 }
 
+span {
+	display: block;
+}
+
 header {
 	display: flex;
 	flex-flow: row nowrap;
 	width: 100%;
+	margin-bottom: 25cqi;
 	justify-content: space-between;
+	padding: 6% 6% 0 6%;
 }
 
 header .img-logo {
@@ -66,7 +75,7 @@ form {
 	display: flex;
 	flex-flow: column nowrap;
 	gap: 5cqi;
-	margin: 10cqi 0 30cqi 0;
+	margin: 10cqi 5cqi 30cqi 5cqi;
 }
 
 form input {
@@ -94,6 +103,7 @@ form button {
 .section {
 	display: flex;
 	flex-flow: column nowrap;
+	padding: 0 6%;
 }
 
 /* all info divs of sections */
@@ -101,15 +111,102 @@ form button {
 	container-type: inline-size;
 }
 
+/* Second section for background change */
+.section:nth-child(3) {
+	background-image: url("../images/bg-curve-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 600% 100%;
+    background-position: top;
+	padding-top: 25cqi;
+}
+
 /* All your files... */
 .section:nth-child(2) .section-info > p:nth-child(1) {
 	font-size: 8cqi;
 	font-weight: 700;
+	margin: 12cqi 0 8cqi 0;
 }
 
 /* Fylo stores your... */
 .section:nth-child(2) .section-info > p:nth-child(2) {
-	padding: 0 4cqi;
 	font-size: 4.5cqi;
 }
 
+/* Stay productive, wherever you are */
+.section:nth-child(3) .section-info > p:nth-child(1) {
+	font-size: 5cqi;
+	font-weight: 700;
+	margin: 15cqi 0 6cqi 0;
+}
+
+/* Never let location... & Securely share files... */
+.section:nth-child(3) .section-info > p:nth-child(n+2):nth-child(-n+3) {
+	text-align: left;
+	font-size: 4.5cqi;
+}
+
+/* See how Fylo works */
+.section:nth-child(3) .section-info > a > p:nth-child(1) {
+	position: relative;
+	font-size: 4.5cqi;
+	color: var(--moderate-cyan);
+	width: fit-content;
+	margin: 12cqi auto;
+	border-bottom: 2px solid var(--moderate-cyan);
+	padding: 0 6cqi 1cqi 0;
+}
+
+/* See how Fylo works ARROW */
+.section:nth-child(3) .section-info > a> p:nth-child(1)::after {
+	position: absolute;
+	content: url("../images/icon-arrow.svg");
+	top: -5px;
+	right: 0;
+	transform: scale(2);
+}
+
+/* Founder card */
+.card-founder {
+	container-type: inline-size;
+	background-color: white;
+	width: 85cqi;
+	margin: 0 auto;
+	padding: 8cqi;
+	border-radius: var(--border-radius);
+	box-shadow: 0px 0px 20px hsla(0, 0%, 0%, .1);
+}
+
+/* Founder card quotes img */
+.card-founder > figure:first-child > img {
+	width: 7cqi;
+	margin-bottom: 3cqi;
+}
+
+/* Founder card comment */
+.card-founder > div:nth-child(2) {
+	text-align: left;
+	font-size: 4.5cqi;
+	margin-bottom: 7cqi;
+}
+
+/* Founder card person img and desc. */
+.card-founder .person-pic-info {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	gap: 3cqi;
+}
+
+/* Founder card person img only */
+.card-founder .person-pic-info figure img {
+	width: 15cqi;
+	border-radius: 50%;
+}
+
+/* Found card person desc. name only */
+.card-founder .person-pic-info div:nth-child(2) span:first-child {
+	text-align: left;
+	font-size: 5cqi;
+	font-weight: 700;
+	margin-bottom: .5cqi;
+}
