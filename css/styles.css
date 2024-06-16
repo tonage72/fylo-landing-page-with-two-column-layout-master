@@ -18,6 +18,7 @@
 	--light-grayish-blue: hsl(240, 75%, 98%);
 	--light-gray: hsl(0, 0%, 75%);
 	--border-radius: 1.5cqi;
+	--info-p-line-height: 7cqi;
 }
 
 img {
@@ -99,14 +100,14 @@ form button {
 	border-radius: var(--border-radius);
 }
 
-/* all three sections */
+/* All three sections */
 .section {
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 0 6%;
 }
 
-/* all info divs of sections */
+/* All info divs of sections */
 .section-info {
 	container-type: inline-size;
 }
@@ -125,11 +126,13 @@ form button {
 	font-size: 8cqi;
 	font-weight: 700;
 	margin: 12cqi 0 8cqi 0;
+	line-height: 10cqi;
 }
 
 /* Fylo stores your... */
 .section:nth-child(2) .section-info > p:nth-child(2) {
 	font-size: 4.5cqi;
+	line-height: var(--info-p-line-height);
 }
 
 /* Stay productive, wherever you are */
@@ -143,6 +146,7 @@ form button {
 .section:nth-child(3) .section-info > p:nth-child(n+2):nth-child(-n+3) {
 	text-align: left;
 	font-size: 4.5cqi;
+	line-height: var(--info-p-line-height);
 }
 
 /* See how Fylo works */
@@ -157,7 +161,7 @@ form button {
 }
 
 /* See how Fylo works ARROW */
-.section:nth-child(3) .section-info > a> p:nth-child(1)::after {
+.section:nth-child(3) .section-info > a > p:nth-child(1)::after {
 	position: absolute;
 	content: url("../images/icon-arrow.svg");
 	top: -5px;
@@ -170,7 +174,7 @@ form button {
 	container-type: inline-size;
 	background-color: white;
 	width: 85cqi;
-	margin: 0 auto;
+	margin: 0 auto 30cqi auto;
 	padding: 8cqi;
 	border-radius: var(--border-radius);
 	box-shadow: 0px 0px 20px hsla(0, 0%, 0%, .1);
@@ -209,4 +213,23 @@ form button {
 	font-size: 5cqi;
 	font-weight: 700;
 	margin-bottom: .5cqi;
+}
+
+/* Third section */
+.section:nth-child(4) {
+	background-color: var(--desaturated-blue);
+	color: white;
+}
+
+/* Get early access today */
+.section:nth-child(4) .section-info > p:nth-child(1) {
+	font-size: 5cqi;
+	font-weight: 700;
+	margin: 15cqi 0 6cqi 0;
+}
+
+/* It only takes a minute ... */
+.section:nth-child(4) .section-info > p:nth-child(2) {
+	font-size: 4.5cqi;
+	line-height: var(--info-p-line-height);
 }
