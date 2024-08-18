@@ -233,3 +233,34 @@ form button {
 	font-size: 4.5cqi;
 	line-height: var(--info-p-line-height);
 }
+
+/* Footer */
+footer {
+	display: grid;
+	gap: 10cqi;
+	container-type: inline-size;
+	color: white;
+	background: var(--color-very-dark-blue);
+	padding: 20cqi 10cqi 10cqi 10cqi;
+}
+
+footer img {
+	width: 60cqi;
+	fill: #FFFFFF;
+	align-items: left;
+	display: inline;
+}
+
+footer ul li img {
+	width: 35px;
+	margin-right: 6cqi;
+}
+
+footer ul {
+	text-align: left;
+	font-size: 6cqi;
+}
+
+footer ul li {
+	margin-bottom: 5cqi;
+}
