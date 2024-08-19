@@ -264,3 +264,32 @@ footer ul {
 footer ul li {
 	margin-bottom: 5cqi;
 }
+
+.social-icons {
+	display: flex;
+	flex-direction: row;
+	gap: 3cqi;
+	margin: 0 auto 3cqi auto;
+}
+
+.social-icons figure {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 2px solid white;
+	width: 10cqi;
+	height: 10cqi;
+	border-radius: 50%;
+}
+
+.social-icons figure:first-child img {
+	width: 3cqi;
+}
+
+.social-icons figure:nth-child(2) img {
+	width: 5cqi;
+}
+
+.social-icons figure:nth-child(3) img{
+	width: 5cqi;
+}
