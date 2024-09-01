@@ -1,23 +1,46 @@
-const getStartedButton = document.querySelector('.get-started-button');
-const inputEmail = document.getElementsByName('input-email')[0];
+const getStartedButton1 = document.querySelector('.get-started-button-1');
+const getStartedButton2 = document.querySelector('.get-started-button-2');
+const inputEmail1 = document.getElementsByName('input-email-1')[0];
 const inputEmail2 = document.getElementsByName('input-email-2')[0];
+const inputError1 = document.querySelector('.error-input-1');
+const inputError2 = document.querySelector('.error-input-2');
 
-getStartedButton.addEventListener('click', e => {
+getStartedButton1.addEventListener('click', e => {
 
-	const inputValueEmail = document.getElementsByName('input-email')[0].value.trim();
+	const inputValueEmail1 = document.getElementsByName('input-email-1')[0].value.trim();
+	
+	if (inputValueEmail1 === '') {
+		displayError1();
+	} else if (!isEmail(inputValueEmail1)) {
+		displayError1();
+	} else {
+		location.reload();
+	}
 
-	if (inputValueEmail === '') {
-		displayError();
-	} else if (!isEmail(inputValueEmail)) {
-		displayError();
+	
+})
+
+getStartedButton2.addEventListener('click', e => {
+
+	const inputValueEmail2 = document.getElementsByName('input-email-2')[0].value.trim();
+	
+	if (inputValueEmail2 === '') {
+		displayError2();
+	} else if (!isEmail(inputValueEmail2)) {
+		displayError2();
 	} else {
 		location.reload();
 	}
 })
 
-function displayError() {
-	inputEmail.style.borderColor = 'red';
-	inputEmail.style.borderWidth = '3px';
+function displayError1() {
+	inputEmail1.style.borderColor = 'red';
+	inputError1.style.visibility = 'visible';
+}
+
+function displayError2() {
+	inputEmail2.style.borderColor = 'red';
+	inputError2.style.visibility = 'visible';
 }
 
 function isEmail(email) {

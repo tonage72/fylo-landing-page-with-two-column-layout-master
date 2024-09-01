@@ -239,7 +239,17 @@ form button {
 	font-size: 4cqi;
 	padding: 0 0 1.5cqi 0;
 	font-weight: bold;
-	color:red;
+	visibility: hidden;
+}
+
+/* Div for 1st error message */
+.error-input-1 {
+	color: red;
+}
+
+/* Div for 2nd error message */
+.error-input-2 {
+	color: white;
 }
 
 /* Footer */
