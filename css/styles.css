@@ -75,7 +75,6 @@ header ul {
 form {
 	display: flex;
 	flex-flow: column nowrap;
-	gap: 5cqi;
 	margin: 10cqi 5cqi 30cqi 5cqi;
 }
 
@@ -232,6 +231,15 @@ form button {
 .section:nth-child(4) .section-info > p:nth-child(2) {
 	font-size: 4.5cqi;
 	line-height: var(--info-p-line-height);
+}
+
+/* Div for error message */
+[class*="error-input-"] {
+	text-align: left;
+	font-size: 4cqi;
+	padding: 0 0 1.5cqi 0;
+	font-weight: bold;
+	color:red;
 }
 
 /* Footer */
