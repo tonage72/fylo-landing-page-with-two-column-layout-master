@@ -283,6 +283,7 @@ footer ul li {
 	margin-bottom: 5cqi;
 }
 
+/* All social media icons. Whole DIV */
 .social-icons {
 	display: flex;
 	flex-direction: row;
@@ -290,6 +291,7 @@ footer ul li {
 	margin: 0 auto 3cqi auto;
 }
 
+/* All social media figure containers for icons */
 .social-icons figure {
 	display: flex;
 	align-items: center;
@@ -300,14 +302,57 @@ footer ul li {
 	border-radius: 50%;
 }
 
+/* Facebook icon */
 .social-icons figure:first-child img {
 	width: 3cqi;
 }
 
+/* X icon */
 .social-icons figure:nth-child(2) img {
 	width: 5cqi;
 }
 
+/* Instagram icon */
 .social-icons figure:nth-child(3) img{
 	width: 5cqi;
+}
+
+@media (width > 1000px) {
+	body {
+		display: grid;
+		grid-template-areas:
+			"header header"
+			"info-1 image-1"
+			"info-2 image-2"
+			"info-3 info-3"
+			"footer footer";
+	}
+
+	header {
+		grid-area: header;
+	}
+
+	.section:nth-child(2) .section-info:nth-child(2) { 
+		grid-area: info-1;
+	}
+
+	.image-1 {
+		grid-area: image-1;
+	}
+
+	.section:nth-child(3) .section-info:nth-child(2) {
+		grid-area: info-2;
+	}
+
+	.image-2 {
+		grid-area: image-2;
+	}
+
+	.section:nth-child(4) {
+		grid-area: info-3;
+	}
+
+	footer {
+		grid-area: footer;
+	}
 }
