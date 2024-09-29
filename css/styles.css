@@ -320,6 +320,8 @@ footer ul li {
 @media (width > 1000px) {
 	body {
 		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto auto auto auto;
 		grid-template-areas:
 			"header header"
 			"info-1 image-1"
