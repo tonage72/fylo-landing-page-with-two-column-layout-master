@@ -104,11 +104,13 @@ form button {
 	display: flex;
 	flex-flow: column nowrap;
 	padding: 0 6%;
+	font-family: "Raleway", sans-serif;
 }
 
 /* All info divs of sections */
 .section-info {
 	container-type: inline-size;
+
 }
 
 /* Second section for background change */
@@ -318,43 +320,42 @@ footer ul li {
 }
 
 @media (width > 1000px) {
-	body {
-		display: grid;
-		grid-template-columns: auto auto;
-		grid-template-rows: auto auto auto auto auto;
-		grid-template-areas:
-			"header header"
-			"info-1 image-1"
-			"info-2 image-2"
-			"info-3 info-3"
-			"footer footer";
+
+	.section {
+		text-align: left;
 	}
 
-	header {
-		grid-area: header;
+	.section:nth-child(2) > .section-info > p:nth-child(1),
+	.section:nth-child(3) > .section-info > p:nth-child(1) {
+		font-size: 6.1cqi;
+		font-weight: 700;
 	}
 
-	.section:nth-child(2) .section-info:nth-child(2) { 
-		grid-area: info-1;
+	.section:nth-child(2) > .section-info > p:nth-child(2),
+	.section:nth-child(3) > .section-info > p:nth-child(2) {
+		font-size: 3.2cqi;
+		line-height: normal;
 	}
 
-	.image-1 {
-		grid-area: image-1;
+	.section:nth-child(2),
+	.section:nth-child(3) {
+		flex-direction: row-reverse;
+		padding-top: 0;
 	}
 
-	.section:nth-child(3) .section-info:nth-child(2) {
-		grid-area: info-2;
+	.section:nth-child(2) > img,
+	.section:nth-child(3) > img {
+		width: 45cqi;
+		align-self: flex-start;
+		margin-left: 4cqi;
 	}
 
-	.image-2 {
-		grid-area: image-2;
+	.section:nth-child(3) > img {
+		margin-top: 8cqi;
 	}
 
-	.section:nth-child(4) {
-		grid-area: info-3;
-	}
-
-	footer {
-		grid-area: footer;
+	.section-info:nth-child(2),
+	.section-info:nth-child(3) {
+		width: 100%;
 	}
 }
