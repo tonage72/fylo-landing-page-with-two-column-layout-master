@@ -41,6 +41,7 @@ body {
 
 a {
 	text-decoration: none;
+	color: black;
 }
 
 ul {
@@ -215,6 +216,11 @@ form button {
 	font-size: 5cqi;
 	font-weight: 700;
 	margin-bottom: .5cqi;
+}
+
+/* Founder card Founder and CEO portion */
+.card-founder .person-pic-info div:nth-child(2) span:nth-child(2) {
+	font-size: 4cqi;
 }
 
 /* Third section */
@@ -485,6 +491,10 @@ footer ul li {
 		justify-content: space-between;
 		column-gap: 0;
 		row-gap: 2cqi;
+
+		a {
+			color:white;
+		}
 	}
 
 	footer ul li {
@@ -556,5 +566,11 @@ footer ul li {
 	header .img-logo {
 		aspect-ratio: 3.4 / 1;
 		width: 15cqi;
+	}
+
+	/* Founder card */
+	.card-founder {
+		width: 75cqi;
+		line-height: 4cqi;
 	}
 }
