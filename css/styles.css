@@ -322,8 +322,14 @@ footer ul li {
 
 @media (width > 1000px) {
 
+	/* All sections */
 	.section {
 		text-align: left;
+	}
+
+	/* Section two */
+	.section:nth-child(2) {
+		margin-bottom: 10cqi;
 	}
 
 	/* All your files.... # & Stay productive....*/
@@ -371,6 +377,7 @@ footer ul li {
 		width: 45cqi;
 		align-self: flex-start;
 		margin-left: 4cqi;
+		margin-top: 5cqi;
 	}
 
 	/* Image in third section only */
@@ -381,9 +388,11 @@ footer ul li {
 	/* info in sections 2 and 3 */
 	.section-info:nth-child(2),
 	.section-info:nth-child(3) {
+		margin-top: 5cqi;
 		width: 100%;
 	}
 
+	/* First email form */
 	form:nth-child(3) {
 		display: grid;
 		grid-template-columns: auto 1fr;
@@ -468,29 +477,34 @@ footer ul li {
 	/* Footer */
 	footer {
 		width: 100%;
-		grid-template-columns: 25cqi 10cqi 10cqi auto;
+		grid-template-columns: 30cqi 15cqi 10cqi 1fr;
 		grid-template-areas:
-			"logo links-1 links-2 social"
+			"logo logo logo logo"
 			"contact links-1 links-2 social";
-		padding: 0;
+		padding: 8% 6% 8% 6%;
 		justify-content: space-between;
-		row-gap: 0;
+		column-gap: 0;
+		row-gap: 2cqi;
 	}
 
-	/* Footer image */
+	footer ul li {
+		margin: 0 0 1.8cqi 0;
+	}
+
+	/* Footer logo */
 	footer img {
 		grid-area: logo;
 		width: 15cqi;
+
+		li {
+			margin: 0 0 1.5cqi 0;
+		}
 	}
 
 	/* Footer contact info */
 	footer ul:nth-child(2) {
 		grid-area: contact;
 		font-size: 1.3cqi;
-
-		li {
-			margin: 0 0 1.5cqi 0;
-		}
 
 		img {
 			height: 1.3cqi;
@@ -503,20 +517,18 @@ footer ul li {
 	footer ul:nth-child(3) {
 		grid-area: links-1;
 		font-size: 1.3cqi;
-
-		li {
-			margin: 0;
-		}
 	}
 
 	/* Footer second row of links */
 	footer ul:nth-child(4) {
 		grid-area: links-2;
 		font-size: 1.3cqi;
+	}
 
-		li {
-			margin: 0;
-		}
+	/* Footer social div */
+	footer .social-icons {
+		grid-area: social;
+		column-gap: 1.5cqi;
 	}
 
 	/* Footer social links (images) */
@@ -527,5 +539,22 @@ footer ul li {
 		img {
 			height: 1.5cqi;
 		}
+	}
+
+	/* header */
+	header {
+		margin-bottom: 5cqi;
+	}
+
+	/* header menu ul */
+	header ul {
+	font-size: 1.5cqi;
+	width: 25cqi;
+	}
+
+	/* header logo */
+	header .img-logo {
+		aspect-ratio: 3.4 / 1;
+		width: 15cqi;
 	}
 }
