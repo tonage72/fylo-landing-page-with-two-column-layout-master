@@ -17,7 +17,7 @@
 	--moderate-cyan: hsl(170, 45%, 43%);
 	--light-grayish-blue: hsl(240, 75%, 98%);
 	--light-gray: hsl(0, 0%, 75%);
-	--border-radius: 1.5cqi;
+	--border-radius: .5cqi;
 	--info-p-line-height: 7cqi;
 }
 
@@ -326,38 +326,45 @@ footer ul li {
 		text-align: left;
 	}
 
+	/* All your files.... # & Stay productive....*/
 	.section:nth-child(2) > .section-info > p:nth-child(1),
 	.section:nth-child(3) > .section-info > p:nth-child(1) {
 		font-size: 6.1cqi;
 		font-weight: 700;
 	}
 
+	/* Detailed desc in section */
 	.section:nth-child(2) > .section-info > p:nth-child(2),
 	.section:nth-child(3) > .section-info > p:nth-child(n+2):nth-child(-n+3) {
 		font-size: 3.2cqi;
 		line-height: normal;
 	}
 
+	/* See how .....*/
 	.section:nth-child(3) .section-info > a > p:nth-child(1) {
 		margin: 4cqi 0 7cqi 0;
 		font-size: 3.2cqi;
 	}
 
+	/* See how ..AFTER image */
 	.section:nth-child(3) .section-info > a > p:nth-child(1)::after {
 		transform: scale(1.5);
 		top: 2px;
 	}
 
+	/* Founder card */
 	.card-founder {
 		margin: 0 0 20cqi 0;
 	}
 
+	/* Second and third sections */
 	.section:nth-child(2),
 	.section:nth-child(3) {
 		flex-direction: row-reverse;
 		padding-top: 0;
 	}
 
+	/* Images in sections */
 	.section:nth-child(2) > img,
 	.section:nth-child(3) > img {
 		width: 45cqi;
@@ -365,16 +372,86 @@ footer ul li {
 		margin-left: 4cqi;
 	}
 
+	/* Image in third section only */
 	.section:nth-child(3) > img {
 		margin-top: 8cqi;
 	}
 
+	/* info in sections 2 and 3 */
 	.section-info:nth-child(2),
 	.section-info:nth-child(3) {
 		width: 100%;
 	}
 
-	form {
+	form:nth-child(3) {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		column-gap: 3cqi;
+		grid-template-areas:
+			"input button"
+			"error error";
+		margin: 5cqi 0 5cqi 0;
+		height: auto;
+	}
+
+	/* First email input */
+	form:nth-child(3) input {
+		grid-area: input;
+		height: 9cqi;
+		width: 57cqi;
+	}
+
+	/* First email button */
+	form:nth-child(3) button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		grid-area: button;
+		height: 9cqi;
+		width: 33cqi;
+		font-size: 3cqi;
+	}
+
+	/* First email error */
+	form:nth-child(3) .error-input-1 {
+		grid-area: error;
+	}
+
+	/* Section four info */
+	.section:nth-child(4) > .section-info {
+		width: 100%;
+	}
+
+	/* Section four */
+	.section:nth-child(4) {
 		flex-direction: row;
+	}
+
+	.section:nth-child(4) .section-info form {
+		width: 100px
+	}
+
+	form:nth-child(2) {
+		width: 100cqi;
+	}
+
+	form:nth-child(2) input {
+		width: 40cqi;
+		font-size: 1.5cqi;
+		height: 5cqi;
+	}
+
+	form:nth-child(2) .error-input-2 {
+		height: 1cqi;
+		font-size: 1cqi;
+	}
+
+	form:nth-child(2) button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 20cqi;
+		font-size: 1.5cqi;
+		height: 5cqi;
 	}
 }
