@@ -333,14 +333,15 @@ footer ul li {
 		font-weight: 700;
 	}
 
-	/* Detailed desc in section */
+	/* Detailed desc in sections */
 	.section:nth-child(2) > .section-info > p:nth-child(2),
-	.section:nth-child(3) > .section-info > p:nth-child(n+2):nth-child(-n+3) {
+	.section:nth-child(3) > .section-info > p:nth-child(n+2):nth-child(-n+3),
+	.section:nth-child(4) > .section-info > p:nth-child(2) {
 		font-size: 3.2cqi;
-		line-height: normal;
+		line-height: 4.5cqi;
 	}
 
-	/* See how .....*/
+	/* See how ..... link */
 	.section:nth-child(3) .section-info > a > p:nth-child(1) {
 		margin: 4cqi 0 7cqi 0;
 		font-size: 3.2cqi;
@@ -425,27 +426,36 @@ footer ul li {
 	/* Section four */
 	.section:nth-child(4) {
 		flex-direction: row;
+		align-items: center;
+		gap: 10cqi;
+		height: 25cqi;
 	}
 
-	.section:nth-child(4) .section-info form {
-		width: 100px
+	/* Section four info */
+	.section:nth-child(4) .section-info p:nth-child(1) {
+		margin: 0 0 5cqi 0;
 	}
 
+	/* Second email form */
 	form:nth-child(2) {
 		width: 100cqi;
+		margin: 0;
 	}
 
+	/* Second email input */
 	form:nth-child(2) input {
 		width: 40cqi;
 		font-size: 1.5cqi;
 		height: 5cqi;
 	}
 
+	/* Second email error */
 	form:nth-child(2) .error-input-2 {
 		height: 1cqi;
 		font-size: 1cqi;
 	}
 
+	/* Second email button */
 	form:nth-child(2) button {
 		display: flex;
 		align-items: center;
@@ -453,5 +463,69 @@ footer ul li {
 		width: 20cqi;
 		font-size: 1.5cqi;
 		height: 5cqi;
+	}
+
+	/* Footer */
+	footer {
+		width: 100%;
+		grid-template-columns: 25cqi 10cqi 10cqi auto;
+		grid-template-areas:
+			"logo links-1 links-2 social"
+			"contact links-1 links-2 social";
+		padding: 0;
+		justify-content: space-between;
+		row-gap: 0;
+	}
+
+	/* Footer image */
+	footer img {
+		grid-area: logo;
+		width: 15cqi;
+	}
+
+	/* Footer contact info */
+	footer ul:nth-child(2) {
+		grid-area: contact;
+		font-size: 1.3cqi;
+
+		li {
+			margin: 0 0 1.5cqi 0;
+		}
+
+		img {
+			height: 1.3cqi;
+			width: 1.3cqi;
+			margin: 0 1.5cqi 0 0;
+		}
+	}
+
+	/* Footer first set of links */
+	footer ul:nth-child(3) {
+		grid-area: links-1;
+		font-size: 1.3cqi;
+
+		li {
+			margin: 0;
+		}
+	}
+
+	/* Footer second row of links */
+	footer ul:nth-child(4) {
+		grid-area: links-2;
+		font-size: 1.3cqi;
+
+		li {
+			margin: 0;
+		}
+	}
+
+	/* Footer social links (images) */
+	footer .social-icons figure {
+		width: 3cqi;
+		height: 3cqi;
+
+		img {
+			height: 1.5cqi;
+		}
 	}
 }
